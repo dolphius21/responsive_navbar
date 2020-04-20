@@ -15,7 +15,7 @@
     padding: 1rem; 
   }
 
-  #toggle:checked ~ .menu {
+  #toggle:checked + .menu {
     display: block;
   }
 
