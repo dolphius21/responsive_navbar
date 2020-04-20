@@ -1,0 +1,9 @@
+@media only screen and (max-width: 768px) {
+  label {
+    display: block;
+    cursor: pointer;
+    line-height: 1.25;
+  }
+
+  
+}
