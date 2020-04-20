@@ -1,9 +1,34 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 568px) {
   label {
     display: block;
     cursor: pointer;
-    line-height: 1.25;
   }
 
-  
+  .menu {
+    position: absolute;
+    left: 0px;
+    top: 63px;
+    width: 100%;
+    text-align: center;
+    background: #444;
+    display: none;
+    padding: 1rem; 
+  }
+
+  #toggle:checked ~ .menu {
+    display: block;
+  }
+
+  .menu li {
+    margin-left: 0;
+  }
+
+  .menu li a {
+    margin: 1rem 0;
+  }
+
+  .menu li a:hover {
+    color: #fff;
+  }
 }
+
