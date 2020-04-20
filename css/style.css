@@ -30,42 +30,53 @@ body {
 .main-nav .flex {
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
-label {
-  display: none;
-  font-size: 1.5rem;
+.logo a {
+  color: #fff;
 }
-
-/* .burger div {
-  background: #fff;
-  height: 2px;
-  width: 20px;
-  margin: 5px;
-} */
 
 #toggle {
   display: none;
 }
 
-.menu li {
-  margin-left: 1.5rem;
+label {
+  font-size: 1.5rem;
 }
 
+.menu {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  background: #444;
+  width: 100%;
+  padding: 0 1rem;
+  height: calc(100vh - 64px);
+  text-align: center;
+  display: block;
+}
+
+
+
 .menu li a {
-  display: inline-block;
-  color: #979797;
-  border-radius: 5px;
+  display: block;
+  color: #a0a0a0;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
 }
 
 .menu li:last-child a {
-  border: 1px solid #fff;
-  padding: 0.25rem 1rem;
+  border: none;
+}
+
+.menu li:hover a {
   color: #fff;
 }
 
-.menu li a:hover {
-  color: #fff;
+
+#toggle:checked + .menu {
+  display: none;
 }
 
 /* showcase */
