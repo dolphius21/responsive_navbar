@@ -44,7 +44,33 @@ label {
   display: none;
 }
 
-@media only screen and (max-width: 500px) {
+.showcase {
+  height: calc(100vh - 71px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url(../showcase.jpg) no-repeat center/cover;
+  text-align: center;
+  color: #fff;
+}
+
+
+.showcase .flex {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.showcase p {
+  font-size: 1.25rem;
+}
+
+/* @media only screen and (max-width: 500px) {
   label {
     display: block;
     cursor: pointer;
@@ -65,10 +91,7 @@ label {
   #toggle:checked + .menu {
     display: block;
   }
-}
-
-
-
+} */
 
 
 
