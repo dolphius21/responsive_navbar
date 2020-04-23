@@ -1,98 +1,74 @@
-html, body {
-  width: 100%;
-  height: 100%;
+* {
+  padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-html {
-  font-family: 'helvetica neue', sans-serif;
+body {
+  font-family: Montserrat;
 }
 
-.nav {
-  border-bottom: 1px solid #eaeaeb;
-  text-align: right;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+nav {
+  background: #0082e6;
+  width: 100%;
+  height: 75px;
+}
+
+.logo {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+#toggler {
+  float: right;
+  padding-right: 1rem;
   height: 70px;
-  line-height: 70px;
+  width: 50px;
 }
 
 .menu {
-  margin: 0 30px 0 0;
+  position: absolute;
+  top: 75px;
+  left: -100%;
+  background: #2c3e50;
+  width: 100%;
+  height: calc(100vh - 75px);
+  text-align: center;
+  transition: all 0.5s ease ;
 }
 
-.menu a {
-  clear: right;
-  text-decoration: none;
-  color: gray;
-  margin: 0 10px;
-  line-height: 70px;
+nav ul li {
+  display: block;
+  margin: 2rem 0;
 }
 
-span {
-  color: #54d17a;
+nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
-label {
-  margin: 0 40px 0 0;
-  font-size: 26px;
-  line-height: 70px;
-  display: none;
-  width: 26px;
-  float: right;
+.active, a:hover {
+  color: #0082e6;
+  transition: 0.3s ease;
 }
 
-#toggle {
-  display: none;
+#toggler:checked ~ .menu {
+  left: 0;
 }
 
 .showcase {
-  height: calc(100vh - 71px);
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url(../showcase.jpg) no-repeat center/cover;
-  text-align: center;
-  color: #fff;
+  background: url(../showcase.jpg) no-repeat center/cover;
+  height: 100vh;
 }
-
-
-.showcase .flex {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.showcase h1 {
-  font-family: 'Bungee Inline', cursive;
-  font-size: 3.5rem;
-  line-height: 1.5;
-}
-
-.showcase p {
-  font-size: 1.25rem;
-}
-
-/* @media only screen and (max-width: 500px) {
-  label {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menu {
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-
-  .menu a {
-    display: block;
-    border-bottom: 1px solid #eaeaeb;
-    margin: 0;
-  }
-
-  #toggle:checked + .menu {
-    display: block;
-  }
-} */
-
-
-
-
