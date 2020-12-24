@@ -13,7 +13,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .flex {
@@ -21,70 +21,66 @@ body {
 }
 
 /* main-nav */
-
-.main-nav {
+.nav-bar {
   background: #333;
   color: #fff;
+  position: relative;
 }
 
-.main-nav .flex {
+.nav-bar .flex {
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .logo a {
   color: #fff;
 }
 
-#toggle {
-  display: none;
-}
-
-label {
-  font-size: 1.5rem;
-}
-
-.menu {
+.nav {
   position: absolute;
-  top: 64px;
-  left: 0;
-  background: #444;
+  height: 0;
   width: 100%;
-  padding: 0 1rem;
-  height: calc(100vh - 64px);
   text-align: center;
-  display: block;
+  right: 0;
+  top: 57px;
+  overflow: hidden;
+  background-color: #444;
+  transition: height 0.5s ease-out;
 }
 
+.nav-items {
+  padding-top: 1rem;
+}
 
-
-.menu li a {
+.nav-item a {
   display: block;
-  color: #a0a0a0;
+  letter-spacing: 1px;
   padding: 1rem;
-  border-bottom: 1px solid #333;
-}
-
-.menu li:last-child a {
-  border: none;
-}
-
-.menu li:hover a {
   color: #fff;
+  transition: background-color 0.5s ease-out;
 }
 
+.nav-item a:hover {
+  background-color: #555;
+}
 
-#toggle:checked + .menu {
-  display: none;
+#toggle {
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+.show {
+  height: 250px;
 }
 
 /* showcase */
 
 .showcase {
-  height: calc(100vh - 63px);
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url(../showcase.jpg) no-repeat center/cover;
+  height: calc(100vh - 57px);
+  background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   text-align: center;
   color: #fff;
 }
@@ -104,4 +100,51 @@ label {
 
 .showcase p {
   font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* main-nav */
+  .nav {
+    position: unset;
+    height: unset;
+    width: unset;
+    background-color: transparent;
+  }
+
+  .nav-items {
+    padding: 0;
+  }
+  
+
+  .nav-item {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .nav-item a {
+    padding: 0.5rem 1rem;
+    color: #a0a0a0;
+  }
+
+  .nav-item a:hover {
+    color: #fff;
+    background-color: transparent;
+    transition: color 0.5s ease-out;
+  }
+
+  .nav-item .highlighted {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  /* showcase */
+  .showcase h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 }
