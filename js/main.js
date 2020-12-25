@@ -10,6 +10,5 @@ document.getElementById('toggle').onclick = () => {
       nav.classList.add('show');
       toggle.classList.remove('fa-bars');
       toggle.classList.add('fa-times');
-      
    }
 };
