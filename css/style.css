@@ -70,6 +70,7 @@ body {
   border: none;
   color: #fff;
   outline: none;
+  cursor: pointer;
 }
 
 .show {
